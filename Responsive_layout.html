@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave Studio</title>
+    <link rel="stylesheet" href="Responsive_layout.css">
+</head>
+<body>
+    <header>
+        <h1>TechWave Studio</h1>
+        <p>Your Portal for Everyday Tech, Gear & Guides</p>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Explore</h2>
+            <a href="#overview">Overview</a>
+            <a href="#featured">Featured Item</a>
+            <a href="#articles">Guides & Tips</a>
+            <a href="#support">Support</a>
+        </aside>
+
+        <main class="content">
+            <section id="overview">
+                <h2>Welcome to TechWave</h2>
+                <p>
+                    We review minimalist desk setups, portable audio equipment, and practical productivity tools to help you build an efficient workspace.
+                </p>
+            </section>
+
+            <section id="featured">
+                <h2>Featured Device</h2>
+                <div class="product-card">
+                    <img src="Image/Headphone.jpg" alt="Wireless ANC Headphones">
+                    <h3>AeroTune ANC Pro</h3>
+                    <p>
+                        Wireless over-ear headphones featuring 40-hour battery life, active noise cancellation, and ergonomic memory-foam cushions.
+                    </p>
+                    <p class="price">₹6,499</p>
+                    <button type="button" id="orderBtn">Order Now</button>
+                    <div id="orderStatus" class="order-status">Added to Cart! Redirecting to checkout...</div>
+                </div>
+            </section>
+
+            <section id="articles">
+                <h2>Recent Tech Guides</h2>
+                <div class="blog-container">
+                    <article class="blog-card">
+                        <h3>Desk Cable Management</h3>
+                        <p>
+                            Simple tricks and cable trays to turn any tangled workspace into a clean, clutter-free setup.
+                        </p>
+                        <a href="#articles">Read Article</a>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Noise Cancellation 101</h3>
+                        <p>
+                            How active vs. passive noise cancellation works and which is best for focused study sessions.
+                        </p>
+                        <a href="#articles">Read Article</a>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Essential Dev Peripherals</h3>
+                        <p>
+                            Choosing the right mechanical keyboard switch and mouse to prevent wrist strain during long hours.
+                        </p>
+                        <a href="#articles">Read Article</a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="support">
+                <h2>Contact & Support</h2>
+                <p>Have questions or gear suggestions? Reach us at: <strong>support@techwave.io</strong></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TechWave Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const orderBtn = document.getElementById('orderBtn');
+        const orderStatus = document.getElementById('orderStatus');
+
+        orderBtn.addEventListener('click', function() {
+            orderBtn.disabled = true;
+            orderBtn.innerText = 'Processing...';
+            orderStatus.style.display = 'block';
+
+            setTimeout(function() {
+                orderBtn.disabled = false;
+                orderBtn.innerText = 'Order Placed ✓';
+                orderStatus.innerText = 'Success! Item added to cart.';
+            }, 800);
+        });
+    </script>
+</body>
+</html>

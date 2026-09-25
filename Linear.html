@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradients</title>
+  <style>
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 6px solid darkorange;
+      margin-bottom: 24px;
+    }
+
+    .linear {
+      margin-right: auto;
+      background: linear-gradient(135deg, moccasin 25%, lightpink 25% 50%, palegreen 50% 75%, lightskyblue 75%);
+    }
+
+    .center-text { 
+      text-align: center; 
+    }
+
+    .radial {
+      margin-inline: auto;
+      background: radial-gradient(circle, moccasin 25%, lightpink 25% 50%, palegreen 50% 75%, lightskyblue 75%);
+    }
+
+    .right-text { 
+      text-align: right; 
+    }
+
+    .conic {
+      margin-left: auto;
+      background: conic-gradient(moccasin 90deg, lightpink 90deg 180deg, palegreen 180deg 270deg, lightskyblue 270deg);
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Linear Gradient</h3>
+  <div class="circle linear"></div>
+
+  <h3 class="center-text">Radial Gradient</h3>
+  <div class="circle radial"></div>
+
+  <h3 class="right-text">Conic Gradient</h3>
+  <div class="circle conic"></div>
+
+</body>
+</html>

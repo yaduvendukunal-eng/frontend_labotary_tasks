@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave Studio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(244, 246, 249);
+            color: rgb(33, 37, 41);
+        }
+
+        header {
+            background-color: rgb(26, 37, 47);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            color: rgb(255, 255, 255);
+        }
+
+        header p {
+            margin: 0;
+            color: rgb(189, 195, 199);
+        }
+
+        .layout {
+            display: flex;
+            min-height: 500px;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: rgb(44, 62, 80);
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            color: rgb(255, 255, 255);
+            margin-top: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            color: rgb(236, 240, 241);
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background-color: rgb(52, 73, 94);
+            color: rgb(255, 255, 255);
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        section {
+            background-color: rgb(255, 255, 255);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid rgb(225, 230, 235);
+        }
+
+        .product-card {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid rgb(44, 62, 80);
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .product-card h3 {
+            color: rgb(26, 37, 47);
+            margin: 15px 0 10px 0;
+        }
+
+        .product-card p {
+            color: rgb(85, 95, 110);
+            line-height: 1.4;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(39, 174, 96);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: rgb(44, 62, 80);
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 15px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: rgb(26, 37, 47);
+        }
+
+        .order-status {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgb(232, 248, 240);
+            color: rgb(39, 174, 96);
+            border: 1px solid rgb(39, 174, 96);
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .blog-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .blog-card {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid rgb(220, 224, 230);
+            background-color: rgb(250, 250, 250);
+            border-radius: 8px;
+        }
+
+        .blog-card h3 {
+            margin-top: 0;
+            color: rgb(26, 37, 47);
+        }
+
+        .blog-card p {
+            color: rgb(90, 100, 115);
+            line-height: 1.4;
+        }
+
+        .blog-card a {
+            color: rgb(41, 128, 185);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-card a:hover {
+            text-decoration: underline;
+            color: rgb(21, 85, 128);
+        }
+
+        footer {
+            background-color: rgb(26, 37, 47);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            color: rgb(189, 195, 199);
+        }
+
+        @media screen and (max-width: 600px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .product-card {
+                width: 100%;
+            }
+
+            .blog-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TechWave Studio</h1>
+        <p>Your Portal for Everyday Tech, Gear & Guides</p>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Explore</h2>
+            <a href="#overview">Overview</a>
+            <a href="#featured">Featured Item</a>
+            <a href="#articles">Guides & Tips</a>
+            <a href="#support">Support</a>
+        </aside>
+
+        <main class="content">
+            <section id="overview">
+                <h2>Welcome to TechWave</h2>
+                <p>
+                    We review minimalist desk setups, portable audio equipment, and practical productivity tools to help you build an efficient workspace.
+                </p>
+            </section>
+
+            <section id="featured">
+                <h2>Featured Device</h2>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Wireless ANC Headphones">
+                    <h3>AeroTune ANC Pro</h3>
+                    <p>
+                        Wireless over-ear headphones featuring 40-hour battery life, active noise cancellation, and ergonomic memory-foam cushions.
+                    </p>
+                    <p class="price">₹6,499</p>
+                    <button type="button" id="orderBtn">Order Now</button>
+                    <div id="orderStatus" class="order-status">Added to Cart! Redirecting to checkout...</div>
+                </div>
+            </section>
+
+            <section id="articles">
+                <h2>Recent Tech Guides</h2>
+                <div class="blog-container">
+                    <article class="blog-card">
+                        <h3>Desk Cable Management</h3>
+                        <p>
+                            Simple tricks and cable trays to turn any tangled workspace into a clean, clutter-free setup.
+                        </p>
+                        <a href="#articles">Read Article</a>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Noise Cancellation 101</h3>
+                        <p>
+                            How active vs. passive noise cancellation works and which is best for focused study sessions.
+                        </p>
+                        <a href="#articles">Read Article</a>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Essential Dev Peripherals</h3>
+                        <p>
+                            Choosing the right mechanical keyboard switch and mouse to prevent wrist strain during long hours.
+                        </p>
+                        <a href="#articles">Read Article</a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="support">
+                <h2>Contact & Support</h2>
+                <p>Have questions or gear suggestions? Reach us at: <strong>support@techwave.io</strong></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TechWave Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const orderBtn = document.getElementById('orderBtn');
+        const orderStatus = document.getElementById('orderStatus');
+
+        orderBtn.addEventListener('click', function() {
+            orderBtn.disabled = true;
+            orderBtn.innerText = 'Processing...';
+            orderStatus.style.display = 'block';
+
+            setTimeout(function() {
+                orderBtn.disabled = false;
+                orderBtn.innerText = 'Order Placed ✓';
+                orderStatus.innerText = 'Success! Item added to cart.';
+            }, 800);
+        });
+    </script>
+</body>
+</html>
