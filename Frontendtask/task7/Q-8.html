@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Task of html</title>
+
+</head>
+
+<body>
+<script>
+    let x=12321;
+    var ori=x;
+    var reverse =0;
+    while (x>0){
+        var temp=x%10;
+        reverse=reverse*10+temp;
+        x=Math.floor(x/10);
+    }
+    console.log(ori==reverse ? "12321 is a Palindrome " : " 12321 is not a palindrome ");
+</script>
+</body>
+</html>

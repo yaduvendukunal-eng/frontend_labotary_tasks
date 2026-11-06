@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Task of html</title>
+
+</head>
+
+<body>
+<script>
+    let x=9087654;
+    var count=0;
+    var even=0;
+    var odd=0;
+    while (x>0){
+        var temp=x%10;
+        count++;
+        if(temp%2==0) even++;
+        else odd++;
+        x=Math.floor(x/10);
+    }
+    console.log("Count :"+count);
+    console.log("Even:"+even);
+    console.log("Odd :"+odd);
+</script>
+</body>
+</html>

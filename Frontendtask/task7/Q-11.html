@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Task of html</title>
+
+</head>
+
+<body>
+<script>
+function armstrong(a){
+    var ori=a;
+    let count = Math.floor(Math.log10(a)) + 1;
+    var sum=0;
+    while (a>0){
+        var temp=a%10;
+        sum+=Math.pow(temp,count);
+        a=Math.floor(a/10);
+    }
+    return ori==sum;
+}
+for (var i=100; i<=999; i++){
+    if (armstrong(i)){
+        console.log("Armstrong no. "+i);
+    }
+}
+</script>
+</body>
+</html> 

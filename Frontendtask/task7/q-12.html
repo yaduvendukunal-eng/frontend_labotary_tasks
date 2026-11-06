@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Task of html</title>
+
+</head>
+
+<body>
+<script>
+let students=[
+    {name:"Rahul",marks:85},
+    {name:"Priya",marks:92},
+    {name:"Amit",marks:76},
+    {name:"Reenu",marks:89},
+    {name:"kiran",marks:68} 
+]
+let total=0,highest=0,high="";
+for (var i of students){
+    total+=i.marks;
+    if (i.marks>highest){
+        highest = i.marks;
+        high=i.name;
+    }
+}
+console.log("Total marks of all Students are : "+total);
+console.log("Average Marks : "+total/students.length);
+console.log("Student with highest marks :"+high);
+console.log("Marks of Student with highest marks :"+highest);
+</script>
+</body>
+</html> 

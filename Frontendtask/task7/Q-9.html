@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Task of html</title>
+
+</head>
+
+<body>
+<script>
+    let x=5837462;
+    var p=x;
+    var even=0,odd=0;
+    while (x>0){
+        var temp=x%10;
+        if(temp%2==0) even+=temp;
+        else odd+=temp;
+        x=Math.floor(x/10);
+    }
+    console.log("Original Number : "+p+"\nSum of even digits is "+even+"\nSum of odd digits is "+odd);
+</script>
+</body>
+</html>

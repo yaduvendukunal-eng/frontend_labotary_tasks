@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Task of html</title>
+
+</head>
+
+<body>
+<script>
+    let x=prompt("Enter the a Number");
+    var reverse=0
+    var sum=0;
+    while (x>0){
+        var temp=x%10;
+        reverse=reverse*10+temp;
+        sum+=temp;
+        x=Math.floor(x/10);
+    }
+    console.log("Reverse :"+reverse);
+    console.log("Sum :"+sum);
+</script>
+</body>
+</html>
