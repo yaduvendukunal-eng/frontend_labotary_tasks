@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 8 - DOM Practice</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    li { margin: 10px 0; }
+    button { margin-left: 5px; cursor: pointer; }
+    #board { display: grid; grid-template-columns: repeat(8, 40px); margin-top: 15px; }
+    .square { width: 40px; height: 40px; }
+  </style>
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <input id="task" placeholder="Enter a task">
+  <button onclick="addTask()">Add</button>
+  <ul id="list"></ul>
+
+  <h2>Chessboard</h2>
+  <div id="board"></div>
+
+  <script>
+    function addTask() {
+      const input = document.getElementById('task');
+      if (!input.value.trim()) return;
+      const li = document.createElement('li');
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      const label = document.createElement('span');
+      label.textContent = ' ' + input.value.trim() + ' ';
+      checkbox.onchange = () => label.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
+      li.append(checkbox, label);
+      ['Up', 'Down', 'Delete'].forEach(action => {
+        const button = document.createElement('button');
+        button.textContent = action;
+        button.onclick = () => {
+          const list = document.getElementById('list');
+          if (action === 'Delete') li.remove();
+          if (action === 'Up' && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+          if (action === 'Down' && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        };
+        li.append(button);
+      });
+      document.getElementById('list').append(li);
+      input.value = '';
+    }
+
+    const board = document.getElementById('board');
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 8; col++) {
+        const square = document.createElement('div');
+        square.className = 'square';
+        square.style.backgroundColor = (row + col) % 2 === 0 ? '#eee' : '#777';
+        board.append(square);
+      }
+    }
+  </script>
+</body>
+</html>
